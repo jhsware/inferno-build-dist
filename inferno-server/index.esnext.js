@@ -1,10 +1,10 @@
 import { EMPTY_OBJ } from 'inferno';
 import { Readable } from 'stream';
 
-var ERROR_MSG = 'a runtime error occured! Use Inferno in development environment to find the error.';
-var isArray = Array.isArray;
+const ERROR_MSG = 'a runtime error occured! Use Inferno in development environment to find the error.';
+const isArray = Array.isArray;
 function isStringOrNumber(o) {
-    var type = typeof o;
+    const type = typeof o;
     return type === 'string' || type === 'number';
 }
 function isNullOrUndef(o) {
@@ -32,18 +32,18 @@ function throwError(message) {
     if (!message) {
         message = ERROR_MSG;
     }
-    throw new Error(("Inferno Error: " + message));
+    throw new Error(`Inferno Error: ${message}`);
 }
 function combineFrom(first, second) {
-    var out = {};
+    const out = {};
     if (first) {
-        for (var key in first) {
+        for (const key in first) {
             out[key] = first[key];
         }
     }
     if (second) {
-        for (var key$1 in second) {
-            out[key$1] = second[key$1];
+        for (const key in second) {
+            out[key] = second[key];
         }
     }
     return out;

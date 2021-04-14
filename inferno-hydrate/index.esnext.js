@@ -1,6 +1,6 @@
 import { render, AnimationQueues, EMPTY_OBJ, _CI, _MCCC, _HI, _RFC, _MFCC, _ME, _MP, _MR, _M } from 'inferno';
 
-var ERROR_MSG = 'a runtime error occured! Use Inferno in development environment to find the error.';
+const ERROR_MSG = 'a runtime error occured! Use Inferno in development environment to find the error.';
 function isNullOrUndef(o) {
     return o === void 0 || o === null;
 }
@@ -17,7 +17,7 @@ function throwError(message) {
     if (!message) {
         message = ERROR_MSG;
     }
-    throw new Error(("Inferno Error: " + message));
+    throw new Error(`Inferno Error: ${message}`);
 }
 
 function isSameInnerHTML(dom, innerHTML) {

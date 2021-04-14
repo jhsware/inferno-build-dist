@@ -1,8 +1,8 @@
 import { getFlagsForElementVnode, createFragment, createVNode, createComponentVNode, Fragment } from 'inferno';
 
-var isArray = Array.isArray;
+const isArray = Array.isArray;
 function isStringOrNumber(o) {
-    var type = typeof o;
+    const type = typeof o;
     return type === 'string' || type === 'number';
 }
 function isString(o) {

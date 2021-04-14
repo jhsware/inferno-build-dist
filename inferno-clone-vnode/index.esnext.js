@@ -1,15 +1,15 @@
 import { createComponentVNode, EMPTY_OBJ, createTextVNode, createFragment, normalizeProps, createVNode } from 'inferno';
 
 function combineFrom(first, second) {
-    var out = {};
+    const out = {};
     if (first) {
-        for (var key in first) {
+        for (const key in first) {
             out[key] = first[key];
         }
     }
     if (second) {
-        for (var key$1 in second) {
-            out[key$1] = second[key$1];
+        for (const key in second) {
+            out[key] = second[key];
         }
     }
     return out;

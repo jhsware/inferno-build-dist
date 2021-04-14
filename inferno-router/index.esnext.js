@@ -3,20 +3,20 @@ import { createPath, parsePath, createBrowserHistory, createHashHistory, createM
 import pathToRegexp from 'path-to-regexp-es6';
 import hoistNonReactStatics from 'hoist-non-inferno-statics';
 
-var isArray = Array.isArray;
+const isArray = Array.isArray;
 function isInvalid(o) {
     return o === null || o === false || o === true || o === void 0;
 }
 function combineFrom(first, second) {
-    var out = {};
+    const out = {};
     if (first) {
-        for (var key in first) {
+        for (const key in first) {
             out[key] = first[key];
         }
     }
     if (second) {
-        for (var key$1 in second) {
-            out[key$1] = second[key$1];
+        for (const key in second) {
+            out[key] = second[key];
         }
     }
     return out;

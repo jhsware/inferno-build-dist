@@ -1,6 +1,6 @@
 import { Component } from 'inferno';
 
-var ERROR_MSG = 'a runtime error occured! Use Inferno in development environment to find the error.';
+const ERROR_MSG = 'a runtime error occured! Use Inferno in development environment to find the error.';
 function isFunction(o) {
     return typeof o === 'function';
 }
@@ -8,7 +8,7 @@ function throwError(message) {
     if (!message) {
         message = ERROR_MSG;
     }
-    throw new Error(("Inferno Error: " + message));
+    throw new Error(`Inferno Error: ${message}`);
 }
 
 // don't autobind these methods since they already have guaranteed context.

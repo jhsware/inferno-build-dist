@@ -1,7 +1,7 @@
 import { Component, render, rerender } from 'inferno';
 
-var ERROR_MSG = 'a runtime error occured! Use Inferno in development environment to find the error.';
-var isArray = Array.isArray;
+const ERROR_MSG = 'a runtime error occured! Use Inferno in development environment to find the error.';
+const isArray = Array.isArray;
 function isNullOrUndef(o) {
     return o === void 0 || o === null;
 }
@@ -21,7 +21,7 @@ function throwError(message) {
     if (!message) {
         message = ERROR_MSG;
     }
-    throw new Error(("Inferno Error: " + message));
+    throw new Error(`Inferno Error: ${message}`);
 }
 
 function isVNode$1(obj) {

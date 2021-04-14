@@ -92,7 +92,7 @@ declare const _default: {
     options: {
         componentComparator: ((lastVNode: VNode, nextVNode: VNode) => boolean) | null;
         createVNode: ((vNode: VNode) => void) | null;
-        renderComplete: ((rootInput: VNode | InfernoNode, parentDOM: Element | Node | SVGAElement | DocumentFragment | ShadowRoot | HTMLElement) => void) | null;
+        renderComplete: ((rootInput: InfernoNode | VNode, parentDOM: Element | Node | HTMLElement | SVGAElement | ShadowRoot | DocumentFragment) => void) | null;
         reactStyles?: boolean | undefined;
     };
     render: typeof render;

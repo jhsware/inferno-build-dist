@@ -11,7 +11,7 @@ export { createElement } from 'inferno-create-element';
 import { findDOMNode } from 'inferno-extras';
 export { findDOMNode } from 'inferno-extras';
 
-var isArray = Array.isArray;
+const isArray = Array.isArray;
 function isNullOrUndef(o) {
     return o === void 0 || o === null;
 }
